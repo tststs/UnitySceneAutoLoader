@@ -1,6 +1,9 @@
 # UnitySceneAutoLoader
 Auto loads a specific scene on play-mode enter and loads the previously opened scene on play-mode stop
 
+# Compatibility
+Tested with Unity 5.3.5f1
+
 # Installation
 Copy the script to `your-project-path/Assets/Editor`
 
