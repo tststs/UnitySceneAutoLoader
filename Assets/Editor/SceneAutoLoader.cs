@@ -28,8 +28,11 @@ static class SceneAutoLoader {
 
 		if (!EditorApplication.isPlaying && EditorApplication.isPlayingOrWillChangePlaymode) {
 
-			PreviousScenePath = SceneManager.GetActiveScene().path;
-			EditorSceneManager.OpenScene(sceneToLoad);
+			if (EditorSceneManager.SaveCurrentModifiedScenesIfUserWantsTo()) {
+
+				PreviousScenePath = SceneManager.GetActiveScene().path;
+				EditorSceneManager.OpenScene(sceneToLoad);
+			}
 
 			return;
         }
